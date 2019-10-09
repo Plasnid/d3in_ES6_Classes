@@ -1,49 +1,9 @@
 import * as d3 from 'd3';
 export default class ScatterDisplay {
-    constructor() {
-        this.h = 350;
-        this.w = 400;
-        this.monthlySales = [{
-                "month": 10,
-                "sales": 100
-            },
-            {
-                "month": 20,
-                "sales": 130
-            },
-            {
-                "month": 30,
-                "sales": 250
-            },
-            {
-                "month": 40,
-                "sales": 300
-            },
-            {
-                "month": 50,
-                "sales": 265
-            },
-            {
-                "month": 60,
-                "sales": 225
-            },
-            {
-                "month": 70,
-                "sales": 180
-            },
-            {
-                "month": 80,
-                "sales": 120
-            },
-            {
-                "month": 90,
-                "sales": 145
-            },
-            {
-                "month": 100,
-                "sales": 130
-            }
-        ];
+    constructor(scHeight, scWidth, scData) {
+        this.h = scHeight;
+        this.w = scWidth;
+        this.monthlySales = scData;
         this.createScatter();
     }
     //creating the KPI
