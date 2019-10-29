@@ -15,11 +15,7 @@ module.exports = {
             { from: 'src/assets/style.css', to: 'style.css' }
         ]),
         new HtmlWebpackPlugin({
-            title: 'my pet',
-            template: 'src/assets/index.html',
-            files:{
-                data:'src/assets/data.json'
-            }
+            template: 'src/assets/index.html'
         }),
         new CleanWebpackPlugin(),
     ],
