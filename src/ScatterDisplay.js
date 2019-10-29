@@ -1,8 +1,9 @@
 import * as d3 from 'd3';
 export default class ScatterDisplay {
-    constructor(scHeight, scWidth, scData) {
+    constructor(scHeight, scWidth, scHolder, scData) {
         this.h = scHeight;
         this.w = scWidth;
+        this.holder = scHolder;
         this.monthlySales = scData;
         this.createScatter();
     }
@@ -35,7 +36,7 @@ export default class ScatterDisplay {
 
     createScatter(){
     //creating the svg
-    let svg = d3.select("#scatterSpace")
+    let svg = d3.select(this.holder)
     .attr("width", this.w)
     .attr("height", this.h);
     //adding dots

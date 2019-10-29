@@ -1,9 +1,10 @@
 import * as d3 from 'd3';
 
 export default class LineDisplay {
-    constructor(lnHeight, lnWidth, salesData) {
+    constructor(lnHeight, lnWidth, lnHolder, salesData) {
         this.h = lnHeight;
         this.w = lnWidth;
+        this.holder = lnHolder;
         this.monthlySales = salesData;
         this.lineFun = d3.line()
             .x(d => d.month * 3)
@@ -13,7 +14,7 @@ export default class LineDisplay {
         this.buildLineChart();
     }
     buildLineChart() {
-        let svg = d3.select("#lineSpace")
+        let svg = d3.select(this.holder)
             .attr("width", this.w)
             .attr("height", this.h);
         let viz = svg.append("path")

@@ -24,8 +24,10 @@ let monthlySales = [
     {"month": 90,"sales": 145},
     {"month": 100,"sales": 230}
 ];
-let myLines = new LineDisplay(lineHeight, lineWidth, monthlySales);
-let myScatter = new ScatterDisplay(lineHeight, lineWidth, monthlySales);
+let lineHolder = "#lineSpace";
+let scatterHolder = "#scatterSpace";
+let myLines = new LineDisplay(lineHeight, lineWidth, lineHolder, monthlySales);
+let myScatter = new ScatterDisplay(lineHeight, lineWidth, scatterHolder, monthlySales);
 
 
 
